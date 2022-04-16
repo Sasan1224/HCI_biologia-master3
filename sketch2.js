@@ -49,30 +49,31 @@ let ecosistemaactual;
 function setup() {
   createCanvas(1900, 1000);
   arreglo_ecosistemas = [
-    "terrestre","acuatico","aereo","desierto"
+    "terrestre","acuatico","aereo","desierto","artico","bosque"
   ]
   arreglo_animales = [
-    "mapache","tiburon","gaviota","camello"
+    "mapache","tiburon","gaviota","camello","rana","polar"
   ]
   rest = new terra("",1560, 500, 490, 870);
   space1 = new terra(arreglo_ecosistemas[0],200, 260, 350, 220);
   space2 = new terra(arreglo_ecosistemas[1],560, 260, 350, 220);
   space3 = new terra(arreglo_ecosistemas[2],920, 260, 350, 220);
-  space4 = new terra(arreglo_ecosistemas[3],200, 600, 350, 220);
- 
+  space4 = new terra(arreglo_ecosistemas[3],200, 500, 350, 220);
+  space5 = new terra(arreglo_ecosistemas[4],560, 500, 350, 220);
+  space6 = new terra(arreglo_ecosistemas[5],920, 500, 350, 220);
  
   anim1 = new animal("1",["terrestre"],1400, 150, 130, 130);
   anim2 = new animal("2",["acuatico"],1560, 150, 130, 130);
   anim3 = new animal("3",["aereo"],1720, 150, 130, 130);
   anim4 = new animal("4",["desierto"],1400, 290, 130, 130);
-  anim5 = new animal("5",[],1560, 290, 130, 130);
-  anim6 = new animal("6",[],1720, 290, 130, 130);
-  anim7 = new animal("7",[],1400, 430, 130, 130);
-  anim8 = new animal("8",[],1560, 430, 130, 130);
-  anim9 = new animal("9",[],1720, 430, 130, 130);
-  anim10 = new animal("10",[],1400, 570, 130, 130);
-  anim11 = new animal("11",[],1560, 570, 130, 130);
-  anim12 = new animal("12",[],1720, 570, 130, 130);
+  anim5 = new animal("5",["artico"],1560, 290, 130, 130);
+  anim6 = new animal("6",["bosque"],1720, 290, 130, 130);
+  anim7 = new animal("7",["terrestre"],1400, 430, 130, 130);
+  anim8 = new animal("8",["acuatico"],1560, 430, 130, 130);
+  anim9 = new animal("9",["aereo"],1720, 430, 130, 130);
+  anim10 = new animal("10",["desierto"],1400, 570, 130, 130);
+  anim11 = new animal("11",["artico"],1560, 570, 130, 130);
+  anim12 = new animal("12",["bosque"],1720, 570, 130, 130);
   anim13 = new animal("13",[],1400, 710, 130, 130);
   anim14 = new animal("14",[],1560, 710, 130, 130);
   anim15 = new animal("15",[],1720, 710, 130, 130);
@@ -125,7 +126,8 @@ imageMode(CENTER)
       space2.display();
       space3.display();
       space4.display();
-     
+      space5.display();
+      space6.display();
 
       contara.display()
 
@@ -613,6 +615,12 @@ function setcurrentecosystem(){
   }
   if(space4.iscurrentterra()){
     ecosistemaactual=space4
+  }
+  if(space5.iscurrentterra()){
+    ecosistemaactual=space5
+  }
+  if(space6.iscurrentterra()){
+    ecosistemaactual=space6
   }
 }
 /*conque bloquear
