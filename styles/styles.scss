@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4em;
+    line-height: 54px;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 36px;
+}
+
+p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 36px;
+}
+
+b {
+    color: #404040;
+}
+
+li{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 36px;
+}
+
+/*------------------Palette color------------------*/
+$primaryColor: #2d9cdb;
+$secondaryColor: #2f80ed;
+$blackColor: #404040;
+
+/*------------------import's------------------*/
+
+@import "./screens/context.scss";
+@import "./screens/instructionScreen1.scss";
+@import "./screens/instructionScreen2.scss";
+@import "./screens/animaInfo.scss";
+@import "./screens/animalnfo2.scss";

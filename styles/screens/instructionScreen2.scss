@@ -1,0 +1,58 @@
+.instruction2{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-image: url("/imgs/instruction.png");
+
+    &__section{
+        width: 50%;
+        margin-top: 110px;
+        margin-left: 194px;
+    }
+
+    &__title{
+        color: #2d9cdb;
+    }
+
+    &__img1{
+        padding-top: 30px;
+    }
+
+    &__img2{
+        padding-top: 30px;
+    }
+    
+    &__btn {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3em;
+        line-height: 36px;
+        margin-left: 1635px;
+        margin-block-end: 0px;
+        margin-block-end: 58px;
+
+        color: white;
+        border-radius: 30px;
+        background-color: #2d9cdb;
+        padding: 10px 50px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #1F76A7;
+        transition: ease-out 0.3s;
+
+        border: none;
+        outline: none;
+    }  
+
+    &__btn:hover{
+        box-shadow: inset 300px 0 0 0 #1F76A7;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+li{
+    list-style-type: square;
+}

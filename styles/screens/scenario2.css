@@ -1,0 +1,102 @@
+.Scenario2 {
+  background-image: url("/imgs/fondo2.png");
+}
+
+.Scenario2__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-top: 90px;
+}
+
+.Scenario2__h1 {
+  color: #2D9CDB;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 15px;
+}
+
+.Scenario2__p {
+  -webkit-padding-after: 15px;
+          padding-block-end: 15px;
+  text-align: center;
+}
+
+.scenarios2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.scenarios2__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: 10px;
+  background-color: #2F80ED;
+  border-radius: 14px;
+}
+.scenarios2__box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+}
+.scenarios2__title {
+  color: white;
+  line-height: 0px;
+  font-weight: bold;
+}
+.scenarios2__text {
+  text-align: left;
+  font-size: 1em;
+  padding: 20px;
+  color: white;
+  margin-left: 10px;
+  line-height: 27px;
+}
+.scenarios2__img3 {
+  padding-top: 25px;
+}
+.scenarios2__img8 {
+  padding-top: 25px;
+}
+.scenarios2__img9 {
+  padding-top: 50px;
+}
+.scenarios2__btn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 36px;
+  margin-top: 50px;
+  margin-left: 1635px;
+  -webkit-margin-after: 58px;
+          margin-block-end: 58px;
+  color: white;
+  border-radius: 30px;
+  background-color: #2d9cdb;
+  padding: 10px 50px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #1F76A7;
+  transition: ease-out 0.3s;
+  border: none;
+  outline: none;
+}
+.scenarios2__btn:hover {
+  box-shadow: inset 300px 0 0 0 #1F76A7;
+  cursor: pointer;
+  color: white;
+}/*# sourceMappingURL=scenario2.css.map */
