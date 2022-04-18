@@ -76,8 +76,11 @@ let animalactual;
 
 let ecosistemaactual;
 
+let pg;
+
 function setup() {
   createCanvas(1900, 1000);
+  pg=createGraphics(1900, 1000);
   arreglo_ecosistemas = [
     "terrestre","acuatico","aereo","desierto","artico","bosque","campo","rocosa"
   ]
@@ -149,7 +152,7 @@ botonazul = loadImage('./imgs/boton.png')
   contara = new contadro(100, 60)
 
 
-  pantalla = 8;
+  pantalla = 6;
 }
 
 function draw() {
@@ -319,7 +322,7 @@ this.ecosistemaactual=undefined;
       anim17.display();
       anim18.display();
       contara.display()
-
+      
       
 
       if (anim1.anmove == true) {
@@ -577,7 +580,7 @@ if(pantalla==6 || pantalla==8){
   setcurrentanimal();
   setcurrentecosystem();
   console.log(animalactual);
-  
+  derectarenciclopedia();
   
   
     derectarmover(anim1);
@@ -641,10 +644,24 @@ else if (pantalla===8){
     pantalla++;
   }
 }
-
-
-
 }
+
+function derectarenciclopedia(){
+  if (mouseX > 1750.5 && mouseX < 1889.5 && mouseY > 22 && mouseY < 118) {
+    if(!document.querySelector("#overlay"))
+    {let div = document.createElement("div");
+    div.id = "overlay";
+    div.style.width="100%";
+    div.style.height="100%";
+    div.style.zIndex=999;
+    div.style.background="rgba(0,0,0,0.5)";
+    div.style.position="fixed";
+    let canvas = document.querySelector("canvas")
+    document.body.prepend(div);}
+
+  }
+}
+
 function derectarboton() {
   if (mouseX > 1657 && mouseX < 1843 && mouseY > 876 && mouseY < 924) {
     console.log("funciona")
