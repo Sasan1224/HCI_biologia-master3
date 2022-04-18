@@ -8,6 +8,7 @@ var space6;
 var space7;
 var space8;
 
+
 var anim1;
 var anim2;
 var anim3;
@@ -26,6 +27,8 @@ var anim15;
 var anim16;
 var anim17;
 var anim18;
+
+var enciclopedia;
 
 let algas;
 let aracneo;
@@ -142,11 +145,11 @@ botonazul = loadImage('./imgs/boton.png')
   fondo7 = loadImage('./imgs/fondo7.png')
   fondo8 = loadImage('./imgs/fondo8.png')
   fondo9 = loadImage('./imgs/fondo9.png')
-
+  enciclopedia = loadImage('./imgs/enciclopedia.png')
   contara = new contadro(100, 60)
 
 
-  pantalla = 6;
+  pantalla = 8;
 }
 
 function draw() {
@@ -180,7 +183,7 @@ imageMode(CENTER)
       break;
     case 6:
       image(fondo6, 950, 500)
-      
+     
 
       rest.display()
       space1.display();
@@ -190,6 +193,7 @@ imageMode(CENTER)
       space5.display();
       space6.display();
 
+    image(enciclopedia,1820,70)
       
 
       anim1.display();
@@ -270,7 +274,7 @@ imageMode(CENTER)
 
       break;
     case 7:
-      image(fondo2, 950, 500)
+      image(fondo7, 950, 500)
       image(botonazul,1750,900)
       break;
     case 8:
@@ -295,7 +299,7 @@ this.ecosistemaactual=undefined;
       space4.display();
       space5.display();
       space6.display();
-
+      image(enciclopedia,1820,70)
       anim1.display();
       anim2.display();
       anim3.display();
@@ -381,7 +385,12 @@ this.ecosistemaactual=undefined;
       detec(anim3, rest)
       break;
     case 9:
-
+      image(fondo9, 950, 500);
+      fill(255);
+      textSize(150);
+      textStyle(BOLD);
+    textAlign(CENTER);
+    text(contara.puntos, 950, 500);
       break;
 
     default:
@@ -560,12 +569,13 @@ function detec(anima, zona) {
 }
 
 function mousePressed() {
-  if (pantalla!==6 || pantalla!==8) {
+  if (pantalla!==6 && pantalla!==8) {
   derectarboton();
   console.log("entra")
 } 
 if(pantalla==6 || pantalla==8){
   setcurrentanimal();
+  setcurrentecosystem();
   console.log(animalactual);
   
   
@@ -597,15 +607,15 @@ function mouseReleased() {
   if(pantalla==6 || pantalla==8){
   setcurrentecosystem();
   console.log(ecosistemaactual);
-  if(checkecosystem(animalactual,ecosistemaactual)){
+  if(checkecosystem(animalactual,ecosistemaactual) && ecosistemaactual && animalactual && ecosistemaactual.name!==""){
     soltare(animalactual,ecosistemaactual.x,ecosistemaactual.y);
-    animalactual.correcto= true;
-    if(pantalla!==6)
+    if(pantalla!==6 && !animalactual.correcto)
       contara.puntos+=10;
+    animalactual.correcto= true;
   }
   else{
     soltare(animalactual, animalactual.initialX, animalactual.initialY);
-    if(pantalla!==6)
+    if(pantalla!==6 && ecosistemaactual && ecosistemaactual?.name!=="" && animalactual)
       contara.puntos-=5;
   }
 }
@@ -658,11 +668,12 @@ function soltare(jam, pos1, pos2) {
 function checkecosystem(animal,ecosystem){
   if(animal?.ecosystems){
     console.log(animal.ecosystems.includes(ecosystem?.name));
-    return animal.ecosystems.includes(ecosystem.name);
+    return animal.ecosystems.includes(ecosystem?.name);
   } else {console.log("no existe el animal")}
 }
 
 function setcurrentanimal(){
+  animalactual=undefined;
   if(anim1.iscurrentanimal()){
     animalactual=anim1;
   }
@@ -718,6 +729,7 @@ function setcurrentanimal(){
 }
 
 function setcurrentecosystem(){
+  ecosistemaactual=undefined;
   if(space1.iscurrentterra()){
     ecosistemaactual=space1
   }
