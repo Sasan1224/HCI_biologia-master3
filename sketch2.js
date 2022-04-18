@@ -1,35 +1,62 @@
-let rest;
-let space1;
-let space2;
-let space3;
-let space4;
-let space5;
-let space6;
-let space7;
-let space8;
+var rest;
+var space1;
+var space2;
+var space3;
+var space4;
+var space5;
+var space6;
+var space7;
+var space8;
 
-let anim1;
-let anim2;
-let anim3;
-let anim4;
-let anim5;
-let anim6;
-let anim7;
-let anim8;
-let anim9;
-let anim10;
-let anim11;
-let anim12;
-let anim13;
-let anim14;
-let anim15;
-let anim16;
-let anim17;
-let anim18;
+var anim1;
+var anim2;
+var anim3;
+var anim4;
+var anim5;
+var anim6;
+var anim7;
+var anim8;
+var anim9;
+var anim10;
+var anim11;
+var anim12;
+var anim13;
+var anim14;
+var anim15;
+var anim16;
+var anim17;
+var anim18;
 
+let algas;
+let aracneo;
+let arthropleura;
+let dodo;
+let Elasmosaurusazul
+let helechos
+let hongo1
+let hongo2
+let hongo3
+let mamut
+let meganeura
+let mosasaurus
+let Piatnitzkysaurus
+let pterodactyl
+let rattusNorvegicus
+let smilodon
+let stegosaurus
+let talapidos
+
+let botonazul;
+let fondo0;
 let fondo1;
 let fondo2;
 let fondo3;
+let fondo4;
+let fondo5;
+let fondo6;
+let fondo7;
+let fondo8;
+let fondo9;
 let imag1;
 
 let contara;
@@ -49,7 +76,7 @@ let ecosistemaactual;
 function setup() {
   createCanvas(1900, 1000);
   arreglo_ecosistemas = [
-    "terrestre","acuatico","aereo","desierto","artico","bosque"
+    "terrestre","acuatico","aereo","desierto","artico","bosque","campo","rocosa"
   ]
   arreglo_animales = [
     "mapache","tiburon","gaviota","camello","rana","polar"
@@ -61,36 +88,65 @@ function setup() {
   space4 = new terra(arreglo_ecosistemas[3],200, 500, 350, 220);
   space5 = new terra(arreglo_ecosistemas[4],560, 500, 350, 220);
   space6 = new terra(arreglo_ecosistemas[5],920, 500, 350, 220);
- 
-  anim1 = new animal("1",["terrestre"],1400, 150, 130, 130);
-  anim2 = new animal("2",["acuatico"],1560, 150, 130, 130);
-  anim3 = new animal("3",["aereo"],1720, 150, 130, 130);
-  anim4 = new animal("4",["desierto"],1400, 290, 130, 130);
-  anim5 = new animal("5",["artico"],1560, 290, 130, 130);
-  anim6 = new animal("6",["bosque"],1720, 290, 130, 130);
-  anim7 = new animal("7",["terrestre"],1400, 430, 130, 130);
-  anim8 = new animal("8",["acuatico"],1560, 430, 130, 130);
-  anim9 = new animal("9",["aereo"],1720, 430, 130, 130);
-  anim10 = new animal("10",["desierto"],1400, 570, 130, 130);
-  anim11 = new animal("11",["artico"],1560, 570, 130, 130);
-  anim12 = new animal("12",["bosque"],1720, 570, 130, 130);
-  anim13 = new animal("13",[],1400, 710, 130, 130);
-  anim14 = new animal("14",[],1560, 710, 130, 130);
-  anim15 = new animal("15",[],1720, 710, 130, 130);
-  anim16 = new animal("16",[],1400, 850, 130, 130);
-  anim17 = new animal("17",[],1560, 850, 130, 130);
-  anim18 = new animal("18",[],1720, 850, 130, 130);
+  
 
 
+  algas = loadImage('./imgs/animals/algas.png')
+  aracneo = loadImage('./imgs/animals/Araneo.png')
+  arthropleura = loadImage('./imgs/animals/Dodo.png')
+  dodo = loadImage('./imgs/animals/arthropleura.png')
+  Elasmosaurusazul = loadImage('./imgs/animals/Elasmosaurusazul.png')
+  helechos = loadImage('./imgs/animals/Helechos.png')
+  hongo1 = loadImage('./imgs/animals/hongo1.png')
+  hongo2 = loadImage('./imgs/animals/hongo2.png')
+  hongo3 = loadImage('./imgs/animals/hongo3.png')
+  mamut = loadImage('./imgs/animals/mamut.png')
+  meganeura = loadImage('./imgs/animals/meganeura.png')
+  mosasaurus = loadImage('./imgs/animals/mosasaurus.png')
+  Piatnitzkysaurus = loadImage('./imgs/animals/Piatnitzkysaurus.png')
+  pterodactyl = loadImage('./imgs/animals/Pterodactyl.png')
+  rattusNorvegicus = loadImage('./imgs/animals/rattusNorvegicus.png')
+  smilodon = loadImage('./imgs/animals/smilodon.png')
+  stegosaurus = loadImage('./imgs/animals/stegosaurus.png')
+  talpidos = loadImage('./imgs/animals/talpidos.png')
+
+
+  
+  anim1 = new animal("1", ["terrestre"], 1400, 150, 130, 130,stegosaurus);
+  anim2 = new animal("2", ["acuatico"], 1560, 150, 130, 130,algas);
+  anim3 = new animal("3", ["aereo"], 1720, 150, 130, 130,meganeura);
+  anim4 = new animal("4", ["desierto"], 1400, 290, 130, 130,aracneo);
+  anim5 = new animal("5", ["artico"], 1560, 290, 130, 130,mamut);
+  anim6 = new animal("6", ["bosque"], 1720, 290, 130, 130,smilodon);
+  anim7 = new animal("7", ["terrestre"], 1400, 430, 130, 130,Piatnitzkysaurus);
+  anim8 = new animal("8", ["acuatico"], 1560, 430, 130, 130,Elasmosaurusazul);
+  anim9 = new animal("9", ["aereo"], 1720, 430, 130, 130,pterodactyl);
+  anim10 = new animal("10", ["desierto"], 1400, 570, 130, 130,talpidos);
+  anim11 = new animal("11", ["acuatico"], 1560, 570, 130, 130,mosasaurus);
+  anim12 = new animal("12", ["bosque"], 1720, 570, 130, 130,helechos);
+  anim13 = new animal("13", ["bosque"], 1400, 710, 130, 130,hongo1);
+  anim14 = new animal("14", ["bosque"], 1560, 710, 130, 130,hongo2);
+  anim15 = new animal("15", ["bosque"], 1720, 710, 130, 130,hongo3);
+  anim16 = new animal("16", ["terrestre"], 1400, 850, 130, 130,rattusNorvegicus);
+  anim17 = new animal("17", ["rocosa"], 1560, 850, 130, 130,arthropleura);
+  anim18 = new animal("18", ["campo"], 1720, 850, 130, 130,dodo);
+
+botonazul = loadImage('./imgs/boton.png')
+  fondo0 = loadImage('./imgs/fondo0.png')
   fondo1 = loadImage('./imgs/fondo1.png')
   fondo2 = loadImage('./imgs/fondo2.png')
   fondo3 = loadImage('./imgs/fondo3.png')
+  fondo4 = loadImage('./imgs/fondo4.png')
+  fondo5 = loadImage('./imgs/fondo5.png')
+  fondo6 = loadImage('./imgs/fondo6.png')
+  fondo7 = loadImage('./imgs/fondo7.png')
+  fondo8 = loadImage('./imgs/fondo8.png')
+  fondo9 = loadImage('./imgs/fondo9.png')
 
   contara = new contadro(100, 60)
 
-  botom = new boton(100,100)
 
-  pantalla = 5;
+  pantalla = 6;
 }
 
 function draw() {
@@ -99,27 +155,32 @@ imageMode(CENTER)
 
   switch (pantalla) {
     case 0:
-      image(fondo1, 950, 500)
+      image(fondo0, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 1:
       image(fondo1, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 2:
-      image(fondo1, 950, 500)
+      image(fondo2, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 3:
-      image(fondo2, 950, 500)
+      image(fondo3, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 4:
-      image(fondo2, 950, 500)
+      image(fondo4, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 5:
-      image(fondo2, 950, 500)
-      botom.display()
+      image(fondo5, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 6:
-      image(fondo3, 950, 500)
-     
+      image(fondo6, 950, 500)
+      
 
       rest.display()
       space1.display();
@@ -129,7 +190,7 @@ imageMode(CENTER)
       space5.display();
       space6.display();
 
-      contara.display()
+      
 
       anim1.display();
       anim2.display();
@@ -210,17 +271,30 @@ imageMode(CENTER)
       break;
     case 7:
       image(fondo2, 950, 500)
+      image(botonazul,1750,900)
       break;
     case 8:
-      image(fondo3, 950, 500)
+      image(fondo6, 950, 500)
 
+this.animalactual=undefined;
+this.ecosistemaactual=undefined;
+      
+      space7 = new terra(arreglo_ecosistemas[6],350, 740, 350, 220);
+      space8 = new terra(arreglo_ecosistemas[7],760, 740, 350, 220);
+
+      
+
+
+
+      space7.display();
+      space8.display();
       rest.display()
       space1.display();
       space2.display();
       space3.display();
-      
-
-      contara.display()
+      space4.display();
+      space5.display();
+      space6.display();
 
       anim1.display();
       anim2.display();
@@ -240,6 +314,9 @@ imageMode(CENTER)
       anim16.display();
       anim17.display();
       anim18.display();
+      contara.display()
+
+      
 
       if (anim1.anmove == true) {
         anim1.mover();
@@ -325,7 +402,7 @@ class contadro {
   display() {
     rectMode(CENTER);
     rect(this.x, this.y, this.d1, this.d2);
-    fill(0)
+  fill(0);
     textSize(20)
     textAlign(CENTER)
     text("puntos : " + this.puntos, this.x, this.y + 6)
@@ -351,10 +428,10 @@ class boton {
   }
 }
 class animal {
-  constructor(name,ecosystems,x, y, d1, d2) {
+  constructor(name,ecosystems,x, y, d1, d2, img) {
     this.ecosystems = ecosystems;
     this.name = name;
-    this.img = loadImage('./imgs/ma.jpg');
+    this.img = img;
     this.x = x;
     this.initialX = x;
     this.y = y;
@@ -367,11 +444,17 @@ class animal {
     this.g = 0;
     this.b = 0;
   }
+  reset(){
+this.x=this.initialX;
+this.y=this.initialY;
+this.correcto=false;
+this.anmove=false;
+  }
+
 
   display() {
     rectMode(CENTER);
-    fill(this.r, this.g, this.b);
-    rect(this.x, this.y, this.d1, this.d2);
+  
     image(this.img, this.x, this.y, this.d1, this.d2 - 10)
 
   }
@@ -445,10 +528,7 @@ function dazul(anima, zona) {
     anima.r = 0;
     anima.g = 0;
     anima.b = 255;
-    if (anima.corecto == false) {
-      contara.puntos += 10;
-    }
-    anima.corecto = true;
+    
   }
 }
 
@@ -457,10 +537,7 @@ function dverde(anima, zona) {
     anima.r = 0;
     anima.g = 255;
     anima.b = 0;
-    if (anima.corecto == false) {
-      contara.puntos += 10;
-    }
-    anima.corecto = true;
+    
   }
 }
 
@@ -469,10 +546,7 @@ function drojo(anima, zona) {
     anima.r = 255;
     anima.g = 0;
     anima.b = 0;
-    if (anima.corecto == false) {
-      contara.puntos += 10;
-    }
-    anima.corecto = true;
+     
   }
 }
 
@@ -486,56 +560,91 @@ function detec(anima, zona) {
 }
 
 function mousePressed() {
+  if (pantalla!==6 || pantalla!==8) {
+  derectarboton();
+  console.log("entra")
+} 
+if(pantalla==6 || pantalla==8){
   setcurrentanimal();
-console.log(animalactual);
-if (pantalla==5) {
-  derectarboton(botom)
-}
+  console.log(animalactual);
+  
+  
+  
+    derectarmover(anim1);
+    derectarmover(anim2);
+    derectarmover(anim3)
+    derectarmover(anim4);
+    derectarmover(anim5);
+    derectarmover(anim6)
+    derectarmover(anim7);
+    derectarmover(anim8);
+    derectarmover(anim9)
+    derectarmover(anim10);
+    derectarmover(anim11);
+    derectarmover(anim12)
+    derectarmover(anim13);
+    derectarmover(anim14);
+    derectarmover(anim15)
+    derectarmover(anim16);
+    derectarmover(anim17);
+    derectarmover(anim18)
 
+  }
 
-  derectarmover(anim1);
-  derectarmover(anim2);
-  derectarmover(anim3)
-  derectarmover(anim4);
-  derectarmover(anim5);
-  derectarmover(anim6)
-  derectarmover(anim7);
-  derectarmover(anim8);
-  derectarmover(anim9)
-  derectarmover(anim10);
-  derectarmover(anim11);
-  derectarmover(anim12)
-  derectarmover(anim13);
-  derectarmover(anim14);
-  derectarmover(anim15)
-  derectarmover(anim16);
-  derectarmover(anim17);
-  derectarmover(anim18)
 }
 
 function mouseReleased() {
+  if(pantalla==6 || pantalla==8){
   setcurrentecosystem();
   console.log(ecosistemaactual);
   if(checkecosystem(animalactual,ecosistemaactual)){
     soltare(animalactual,ecosistemaactual.x,ecosistemaactual.y);
     animalactual.correcto= true;
+    if(pantalla!==6)
+      contara.puntos+=10;
   }
   else{
     soltare(animalactual, animalactual.initialX, animalactual.initialY);
-    
-
+    if(pantalla!==6)
+      contara.puntos-=5;
   }
-  
 }
-function derectarboton(zona) {
-  if (mouseX > zona.x - (zona.d1 / 2) && mouseX < zona.x + (zona.d1 / 2) && mouseY > zona.y - (zona.d2 / 2) && mouseY < zona.y + (zona.d2 / 2)) {
- console.log("caka")
+if(pantalla===6){
+  if(anim1.correcto && anim2.correcto && anim3.correcto && anim4.correcto && anim5.correcto && anim6.correcto && anim7.correcto && anim8.correcto && anim9.correcto && anim10.correcto && anim11.correcto && anim12.correcto){
+    anim1.reset();
+    anim2.reset();
+    anim3.reset();
+    anim4.reset();
+    anim5.reset();
+    anim6.reset();
+    anim7.reset();
+    anim8.reset();
+    anim9.reset();
+    anim10.reset();
+    anim11.reset();
+    anim12.reset();
+    pantalla++;
+  }
+}
+else if (pantalla===8){
+  if(anim1.correcto && anim2.correcto && anim3.correcto && anim4.correcto && anim5.correcto && anim6.correcto && anim7.correcto && anim8.correcto && anim9.correcto && anim10.correcto && anim11.correcto && anim12.correcto && anim13.correcto && anim14.correcto && anim15.correcto && anim16.correcto && anim17.correcto && anim18.correcto){
+    pantalla++;
+  }
+}
+
+
+
+}
+function derectarboton() {
+  if (mouseX > 1657 && mouseX < 1843 && mouseY > 876 && mouseY < 924) {
+    console.log("funciona")
  pantalla+=1;
   }
 }
 function derectarmover(zona) {
   if (mouseX > zona.x - (zona.d1 / 2) && mouseX < zona.x + (zona.d1 / 2) && mouseY > zona.y - (zona.d2 / 2) && mouseY < zona.y + (zona.d2 / 2)) {
     zona.anmove = true;
+    console.log("derectar")
   }
 }
 
@@ -548,7 +657,7 @@ function soltare(jam, pos1, pos2) {
 
 function checkecosystem(animal,ecosystem){
   if(animal?.ecosystems){
-    console.log(animal.ecosystems.includes(ecosystem.name));
+    console.log(animal.ecosystems.includes(ecosystem?.name));
     return animal.ecosystems.includes(ecosystem.name);
   } else {console.log("no existe el animal")}
 }
@@ -601,28 +710,45 @@ function setcurrentanimal(){
   }if(anim16.iscurrentanimal()){
     animalactual=anim16;
   }
+  if(anim17.iscurrentanimal()){
+    animalactual=anim17;
+  }if(anim18.iscurrentanimal()){
+    animalactual=anim18;
+  }
 }
 
 function setcurrentecosystem(){
   if(space1.iscurrentterra()){
     ecosistemaactual=space1
   }
-  if(space2.iscurrentterra()){
+  else if(space2.iscurrentterra()){
     ecosistemaactual=space2
   }
-  if(space3.iscurrentterra()){
+  else if(space3.iscurrentterra()){
     ecosistemaactual=space3
   }
-  if(space4.iscurrentterra()){
+  else if(space4.iscurrentterra()){
     ecosistemaactual=space4
   }
-  if(space5.iscurrentterra()){
+  else if(space5.iscurrentterra()){
     ecosistemaactual=space5
   }
-  if(space6.iscurrentterra()){
+  else if(space6.iscurrentterra()){
     ecosistemaactual=space6
   }
+  else if(space7?.iscurrentterra()){
+    ecosistemaactual=space7
+  }
+  else if(space8?.iscurrentterra()){
+    ecosistemaactual=space8
+  }
 }
+
+
+
+
+
+
 /*conque bloquear
 
     anima.anmove = false;
