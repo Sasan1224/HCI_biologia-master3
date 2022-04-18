@@ -656,9 +656,14 @@ function derectarenciclopedia(){
     div.style.zIndex=999;
     div.style.background="rgba(0,0,0,0.5)";
     div.style.position="fixed";
+    div.style.display="flex";
+    div.style.justifyContent="center";
+    div.style.alignContent="center";
     let canvas = document.querySelector("canvas")
+    let page1 = document.createElement("img");
+    page1.src="./imgs/libro1.png";
+    div.appendChild(page1);
     document.body.prepend(div);}
-
   }
 }
 
