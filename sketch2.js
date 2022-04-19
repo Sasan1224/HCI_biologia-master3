@@ -8,6 +8,14 @@ var space6;
 var space7;
 var space8;
 
+var bosque;
+var selva;
+var desierto;
+var acuatico;
+var nevado;
+var subterraneo;
+var campo;
+var rocosa;
 
 var anim1;
 var anim2;
@@ -82,20 +90,30 @@ function setup() {
   createCanvas(1900, 1000);
   pg=createGraphics(1900, 1000);
   arreglo_ecosistemas = [
-    "terrestre","acuatico","aereo","desierto","artico","bosque","campo","rocosa"
+    "bosque","selva", "desierto", "acuatico", "nevado", "subterraneo", "campo", "rocosa"
   ]
   arreglo_animales = [
     "mapache","tiburon","gaviota","camello","rana","polar"
   ]
-  rest = new terra("",1560, 500, 490, 870);
-  space1 = new terra(arreglo_ecosistemas[0],200, 260, 350, 220);
-  space2 = new terra(arreglo_ecosistemas[1],560, 260, 350, 220);
-  space3 = new terra(arreglo_ecosistemas[2],920, 260, 350, 220);
-  space4 = new terra(arreglo_ecosistemas[3],200, 500, 350, 220);
-  space5 = new terra(arreglo_ecosistemas[4],560, 500, 350, 220);
-  space6 = new terra(arreglo_ecosistemas[5],920, 500, 350, 220);
-  
 
+  bosque = loadImage('./imgs/sceneario/bosque.png')
+  selva = loadImage('./imgs/sceneario/selva.png')
+  desierto = loadImage('./imgs/sceneario/desierto.png')
+  acuatico = loadImage('./imgs/sceneario/acuatico.png')
+  nevado = loadImage('./imgs/sceneario/artico.png')
+  subterraneo = loadImage('./imgs/sceneario/subterraneo.png')
+  campo = loadImage('./imgs/sceneario/campo.png')
+  rocosa = loadImage('./imgs/sceneario/rocoso.png')
+
+  rest = new terra("",1560, 500, 490, 870);
+  space1 = new terra(arreglo_ecosistemas[0],200, 260, 350, 220, bosque);
+  space2 = new terra(arreglo_ecosistemas[1],560, 260, 350, 220, selva);
+  space3 = new terra(arreglo_ecosistemas[2],920, 260, 350, 220, desierto );
+  space4 = new terra(arreglo_ecosistemas[3],200, 500, 350, 220, acuatico);
+  space5 = new terra(arreglo_ecosistemas[4],560, 500, 350, 220, nevado);
+  space6 = new terra(arreglo_ecosistemas[5],920, 500, 350, 220, subterraneo);
+  
+  
 
   algas = loadImage('./imgs/animals/algas.png')
   aracneo = loadImage('./imgs/animals/Araneo.png')
@@ -118,24 +136,24 @@ function setup() {
 
 
   
-  anim1 = new animal("1", ["terrestre"], 1400, 150, 130, 130,stegosaurus);
+  anim1 = new animal("1", ["selva"], 1400, 150, 130, 130,stegosaurus);
   anim2 = new animal("2", ["acuatico"], 1560, 150, 130, 130,algas);
-  anim3 = new animal("3", ["aereo"], 1720, 150, 130, 130,meganeura);
-  anim4 = new animal("4", ["desierto"], 1400, 290, 130, 130,aracneo);
-  anim5 = new animal("5", ["artico"], 1560, 290, 130, 130,mamut);
-  anim6 = new animal("6", ["bosque"], 1720, 290, 130, 130,smilodon);
-  anim7 = new animal("7", ["terrestre"], 1400, 430, 130, 130,Piatnitzkysaurus);
+  anim3 = new animal("3", ["desierto"], 1720, 150, 130, 130,meganeura);
+  anim4 = new animal("4", ["rocosa"], 1400, 290, 130, 130,aracneo);
+  anim5 = new animal("5", ["nevado"], 1560, 290, 130, 130,mamut);
+  anim6 = new animal("6", ["nevado"], 1720, 290, 130, 130,smilodon);
+  anim7 = new animal("7", ["campo"], 1400, 430, 130, 130,Piatnitzkysaurus);
   anim8 = new animal("8", ["acuatico"], 1560, 430, 130, 130,Elasmosaurusazul);
-  anim9 = new animal("9", ["aereo"], 1720, 430, 130, 130,pterodactyl);
-  anim10 = new animal("10", ["desierto"], 1400, 570, 130, 130,talpidos);
+  anim9 = new animal("9", ["rocosa"], 1720, 430, 130, 130,pterodactyl);
+  anim10 = new animal("10", ["subterraneo"], 1400, 570, 130, 130,talpidos);
   anim11 = new animal("11", ["acuatico"], 1560, 570, 130, 130,mosasaurus);
   anim12 = new animal("12", ["bosque"], 1720, 570, 130, 130,helechos);
   anim13 = new animal("13", ["bosque"], 1400, 710, 130, 130,hongo1);
   anim14 = new animal("14", ["bosque"], 1560, 710, 130, 130,hongo2);
   anim15 = new animal("15", ["bosque"], 1720, 710, 130, 130,hongo3);
-  anim16 = new animal("16", ["terrestre"], 1400, 850, 130, 130,rattusNorvegicus);
-  anim17 = new animal("17", ["rocosa"], 1560, 850, 130, 130,arthropleura);
-  anim18 = new animal("18", ["campo"], 1720, 850, 130, 130,dodo);
+  anim16 = new animal("16", ["subterraneo"], 1400, 850, 130, 130,rattusNorvegicus);
+  anim17 = new animal("17", ["desierto"], 1560, 850, 130, 130,dodo);
+  anim18 = new animal("18", ["selva"], 1720, 850, 130, 130,arthropleura);
 
 botonazul = loadImage('./imgs/boton.png')
   fondo0 = loadImage('./imgs/fondo0.png')
@@ -152,7 +170,7 @@ botonazul = loadImage('./imgs/boton.png')
   contara = new contadro(100, 60)
 
 
-  pantalla = 6;
+  pantalla = 0;
 }
 
 function draw() {
@@ -202,12 +220,9 @@ imageMode(CENTER)
       anim1.display();
       anim2.display();
       anim3.display();
-      anim4.display();
       anim5.display();
       anim6.display();
-      anim7.display();
       anim8.display();
-      anim9.display();
       anim10.display();
       anim11.display();
       anim12.display();
@@ -286,12 +301,8 @@ imageMode(CENTER)
 this.animalactual=undefined;
 this.ecosistemaactual=undefined;
       
-      space7 = new terra(arreglo_ecosistemas[6],350, 740, 350, 220);
-      space8 = new terra(arreglo_ecosistemas[7],760, 740, 350, 220);
-
-      
-
-
+      space7 = new terra(arreglo_ecosistemas[6],350, 740, 350, 220,campo);
+      space8 = new terra(arreglo_ecosistemas[7],760, 740, 350, 220,rocosa);
 
       space7.display();
       space8.display();
@@ -485,7 +496,8 @@ this.anmove=false;
 }
 
 class terra {
-  constructor(name, x, y, d1, d2) {
+  constructor(name, x, y, d1, d2, img) {
+    this.img = img;
     this.name = name;
     this.x = x;
     this.y = y;
@@ -496,8 +508,11 @@ class terra {
 
   display() {
     rectMode(CENTER);
-    fill(100);
-    rect(this.x, this.y, this.d1, this.d2);
+    fill(255);
+    if(this.img)
+      image(this.img, this.x, this.y, this.d1, this.d2);
+    else
+      rect(this.x, this.y, this.d1, this.d2);
   } 
   
   iscurrentterra(){
@@ -602,6 +617,25 @@ if(pantalla==6 || pantalla==8){
     derectarmover(anim17);
     derectarmover(anim18)
 
+    if(document.querySelector("#overlay")){
+      if(mouseX > 430 && mouseX < 780 && mouseY > 520 && mouseY < 635){
+        document.querySelector("#overlay").querySelector("img").src="./imgs/libro4.png"
+      }
+      else if (mouseX > 1100 && mouseX < 1480 && mouseY > 520 && mouseY < 635 || (document.querySelector("#overlay").classList.contains("libro3") && mouseX > 310 && mouseX < 380 && mouseY > 750 && mouseY < 820 )){
+        document.querySelector("#overlay").classList.remove("libro3")
+        document.querySelector("#overlay").querySelector("img").src="./imgs/libro2.png"
+        document.querySelector("#overlay").classList.add("libro2")
+      }
+      else if (mouseX > 1500 && mouseX < 1570 && mouseY > 750 && mouseY < 820){
+        document.querySelector("#overlay").classList.remove("libro2")
+        document.querySelector("#overlay").querySelector("img").src="./imgs/libro3.png"
+        document.querySelector("#overlay").classList.add("libro3")
+      }
+      
+      else if (mouseX > 1550 && mouseX < 1610 && mouseY > 50 && mouseY < 120){
+        document.querySelector("#overlay").remove();
+      }
+    }
   }
 
 }
@@ -623,7 +657,7 @@ function mouseReleased() {
   }
 }
 if(pantalla===6){
-  if(anim1.correcto && anim2.correcto && anim3.correcto && anim4.correcto && anim5.correcto && anim6.correcto && anim7.correcto && anim8.correcto && anim9.correcto && anim10.correcto && anim11.correcto && anim12.correcto){
+  if(anim1.correcto && anim2.correcto && anim3.correcto && anim5.correcto && anim6.correcto && anim8.correcto  && anim10.correcto && anim11.correcto && anim12.correcto){
     anim1.reset();
     anim2.reset();
     anim3.reset();
